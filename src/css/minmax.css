@@ -1,0 +1,8 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    /* minmax - columns: Determina el minimo del ancho de cada caja del grid */
+    grid-template-columns: minmax(300px, 1fr) 1fr;
+    /* minmax(min-altura, auto) l rows: Determina la medida minima y en el max el auto del contenido de cada caja*/
+    grid-template-rows: minmax(100px, auto) 400px;
+}

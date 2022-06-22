@@ -1,0 +1,8 @@
+.container {
+    display: grid; /*Determina que tipo de formato abarcará*/
+    /* Las 1fr determinan automaticamente el tamaño de la columna dependiendo del tamaño que fijes las demás */
+    grid-template-columns: 1fr 2fr 1fr; /*Define el tamaño y numero de columnas a contener*/
+    grid-template-rows: 150px 300px; /*Define el tamaño y numero de filas a contener*/
+    grid-gap: 20px; /*Espaciado entre elementos*/
+}
+

@@ -1,0 +1,7 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    /* repeat(numColumns - tamaño): Funcion para repetir los tamaños y num columns a mostrar */
+    grid-template-columns: 200px repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
