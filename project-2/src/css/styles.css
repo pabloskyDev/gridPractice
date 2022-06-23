@@ -20,6 +20,11 @@ body {
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
+
+    grid-template-areas: "header    header      header"
+                        "contenido  contenido   sidebar"
+                        "widget-1   widget-2    sidebar"
+                        "footer     footer      footer";
 }
 
 .contenedor > div,
@@ -35,11 +40,11 @@ body {
 .contenedor .header {
     background: #12203e;
     color: #fff;
-    grid-column: 1/ -1;
+    grid-area: header;
 }
 
 .contenedor .contenido {
-    grid-column: span 2;
+    grid-area: contenido;
 }
 
 .contenedor .sidebar {
@@ -50,7 +55,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100px;
-    grid-row: 2/ 4;
+    grid-area: sidebar;
 }
 
 .contenedor .widget-1,
@@ -63,22 +68,26 @@ body {
     align-items: center;
 }
 
+.contenedor .widget-1 {
+    grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+    grid-area: widget-2;
+}
+
 .contenedor .footer {
     background: #12203e;
     color: #fff;
-    grid-column: span 3;
+    grid-area: footer;
 }
 
 @media screen and (max-width: 768px) {
-    .contenedor .contenido {
-        grid-column: 1 / -1;
+    .contenedor {
+        grid-template-areas: "header    header      header"
+                            "contenido  contenido   contenido"
+                            "sidebar    sidebar     sidebar"
+                            "widget-1   widget-1    widget-2"
+                            "footer     footer      footer";
     }
-
-    .contenedor .sidebar {
-        grid-column: 1 / -1;
-    }
-
-    .contenedor .widget-1 {
-        grid-column: span 2;
-    }   
 }
