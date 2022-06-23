@@ -1,0 +1,13 @@
+/* 
+GRID - AutoFill - Fit
+Serán bastante útiles al adaptarlos a dispositivos móviles
+*/
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+
+    /* Auto-fill: Rellena la fila con todas las columnas que pueda poner dentro */
+    /* Auto-fit: Rellena la fila con todas las columnas que pueda poner dentro y además si son más pequeñas las ajusta al tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
