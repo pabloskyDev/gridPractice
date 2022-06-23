@@ -1,0 +1,18 @@
+.container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,  1fr);
+    grid-template-rows: repeat(3,  200px);
+
+    /* Alinea horizontalmente */
+    /* justify-items: stretch; Todo el espacio */
+    justify-items: center;
+    /* Alinea verticalmente */
+    align-items: center;
+}
+
+.container .item {
+    background: #ff8000;
+    justify-self: stretch;
+    align-self: stretch;
+}
